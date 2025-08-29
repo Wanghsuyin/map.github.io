@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<title>第一屆國民大會代表名錄（民國五十年）</title>
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Leaflet 地圖 -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Chart.js & DataLabels -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+<!-- DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+
+<div class="intro-box">
+  <h2>第一屆國民大會代表名錄（民國五十年）</h2>
+    <p>本名錄所記載者，為中華民國第一屆國民大會代表於民國五十年（西元1961年）時之在臺狀況。</p>
+    <h3>歷史背景：「萬年國會」的形成</h3>
+    <p>第一屆國民大會代表原於民國36年（1947年）在全國各地普選產生，總額為3,045人。其法定任務為選舉總統、副總統及修改《中華民國憲法》。然而，民國38年（1949年）國共內戰形勢逆轉，國民政府遷臺，僅有部分國大代表隨之來臺。</p>
+    <p>根據憲法，國大代表每六年應改選一次。但因政府宣佈在「動員戡亂時期」無法在中國大陸實施憲政下的選舉，故第一屆中央民意代表無法全面改選。原有代表繼續行使職權，並於民國43年（1954年）通過《動員戡亂時期臨時條款》，此即「萬年國會」由來。</p>
+    <p>至民國五十年，隨政府遷臺之第一屆國大代表人數約為1,600人，與原總額相差近半。</p>
+  </div>
+
+<h1>統計資料</h1>
+<div class="charts-row">
+  <div class="chart-container pie-chart">
+    <h2>男女比例</h2>
+    <canvas id="genderChart"></canvas>
+  </div>
+  <div class="chart-container pie-chart">
+    <h2>各省人數比例</h2>
+    <canvas id="provinceChart"></canvas>
+  </div>
+  <div class="chart-container bar-chart">
+    <h2>年齡分布</h2>
+    <canvas id="ageChart"></canvas>
+  </div>
+</div>
+
+<h2>各領域分布</h2>
+<div class="charts-row">
+  <div class="chart-container pie-chart">
+    <h2>政界</h2>
+    <canvas id="政界Chart"></canvas>
+  </div>
+  <div class="chart-container pie-chart">
+    <h2>軍方</h2>
+    <canvas id="軍方Chart"></canvas>
+  </div>
+  <div class="chart-container pie-chart">
+    <h2>商界</h2>
+    <canvas id="商界Chart"></canvas>
+  </div>
+  <div class="chart-container pie-chart">
+    <h2>教育界</h2>
+    <canvas id="教育界Chart"></canvas>
+  </div>
+</div>
+
+<h2>特殊個案</h2>
+<p id="oldest-person"></p>
+<p id="youngest-person"></p>
+
+<h2>人員列表</h2>
+<table id="peopleTable" class="display"></table>
+
+<h2>地圖</h2>
+<div id="map" style="height:600px;"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
