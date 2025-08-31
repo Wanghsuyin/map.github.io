@@ -67,7 +67,7 @@ function initMap(){
                 <b>經歷:</b><br>${exp}
             `;
             L.circleMarker([p.lat,p.lon],{
-                radius:1, color:'blue', fillColor:'blue', fillOpacity:0.7
+                radius:3, color:'blue', fillColor:'blue', fillOpacity:0.7
             }).addTo(map).bindPopup(popup);
         }
     });
@@ -229,3 +229,4 @@ fetch("data/people_data.json")
     initCharts();
     initTable();
 });
+
